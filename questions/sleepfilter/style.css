@@ -1,0 +1,93 @@
+*{margin:0;padding:0;}
+.left{float:left;margin-left:20px;}
+.right{float:right;margin-right:30px}
+body{background:#7E7C57;}
+#header{
+	background:#484743;
+	height:100px;
+	width:100%
+}
+#header img{
+	display:block;
+	margin:0 auto;
+}
+#middle{
+	background:#7F7D57;
+	width:100%;
+}
+#content{
+	width:800px;
+	margin:0 auto;
+	padding-top:40px;
+}
+#button{
+	display:block;
+	margin:50px auto 30px;
+	width:100px;
+	height:100px;
+}
+#typefield{
+	display:block;
+	background:#7F7D57;
+	font-size:80px;
+	color:white;
+	font-family:华文行楷,华文新魏;
+	margin:50px auto;
+	line-height:150%;
+	border:none;
+}
+#footer{
+	background:#DED629;
+	width:100%;
+	height:40px;
+}
+#footer_content{
+	width:800px;
+	height:100%;
+	margin:0 auto;
+}
+.footer_copy{
+	height:100%;
+	line-height:40px;
+	float:right;
+	font-family:serif,sans-serif;
+}
+.footer_copy a{
+	color:black;
+	text-decoration:none;
+}
+#wrap {width:100%;height:690px;margin:0 auto;position:relative;overflow:hidden;}
+#wrap .page{font-size:25px;font-weight:bold;color:white;position:absolute;bottom:10px;text-align:center;width:100%;}
+#wrap .menu{float:left;}
+#wrap .menu li {float:left;width:20px;cursor:pointer;color:#FDC000;font-size:25px;font-weight:bold;list-style:none;margin-right:5px;}
+#wrap .page div{float:left;}
+
+#wrap .main {position:absolute;top:0px;width:190px;}
+#wrap .main .mbox {float:left;width:800px;height:700px;text-align:center;color:#fff;}
+#wrap .main .mbox  p{font-size:20px; line-height:200%;text-align:left;margin-top:20px;}
+h1{	
+	text-align:center;
+	color:white;
+	font-size:30px;
+	font-family:华文新魏;
+	border-bottom:1px solid #FDC000;
+}
+table{
+	margin:10px auto;
+	font-size:20px;
+	color:black;
+	text-align:center;
+	width:800px;
+	font-weight:bold;
+	/*border-color:red; 在IE中不起作用*/
+}
+table td{height:42px;}
+.button2{width:50px;height:30px;}
+.button3{width:100px;height:30px;}
+.button2:hover{cursor:pointer;}
+.button3:hover{cursor:pointer;}
+.textLong{width:430px;height:23px;font-size:18px;text-align:center;font-weight:bold;}
+.textShort{width:30px;height:23px;font-size:18px;text-align:center;font-weight:bold;}
+.textNormal{font-size:18px;height:23px;width:150px;text-align:center;font-weight:bold;}
+.textUnit1{font-size:18px;height:23px;width:130px;text-align:center;font-weight:bold;}
+.textUnit2{font-size:18px;height:23px;width:105px;text-align:center;font-weight:bold;}
