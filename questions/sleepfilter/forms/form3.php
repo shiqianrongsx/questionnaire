@@ -15,7 +15,7 @@
 			if(!executeQuery($query))
 			{
 			$error = true;
-			$_GLOBALS['message']="Can't drop database". mysql_error();
+			$_GLOBALS['message']=mysql_error();
 			goto end;
 			}
 		}
@@ -26,7 +26,7 @@
 		if(!executeQuery($query))
 		{
 		$error = true;		
-		$_GLOBALS['message']="Your previous answer is not updated.Please answer once again". mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		break;
 		}
 	}

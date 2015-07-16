@@ -15,14 +15,14 @@
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't access database1.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}
 		$query="CREATE TABLE ".$_SESSION['studentname']."(like test);";
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't create table1.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}		
 		}
@@ -31,28 +31,14 @@
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't drop table.".' Because '. mysql_error();
-		goto end;
-		}
-		$query="delete from users where name = '".$_SESSION['studentname']."';";
-		if(!executeQuery($query))
-		{
-		$error=true;
-		$_GLOBALS['message']="Can't delete record.".' Because '. mysql_error();
-		goto end;
-		}
-		$query="insert users (name) value('".$_SESSION['studentname']."');";
-		if(!executeQuery($query))
-		{
-		$error=true;
-		$_GLOBALS['message']="Can't access database2.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}
 		$query="CREATE TABLE ".$_SESSION['studentname']."(like test);";
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't create table2.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}
 	}	 

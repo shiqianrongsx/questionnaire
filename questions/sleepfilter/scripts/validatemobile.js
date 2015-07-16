@@ -1,23 +1,35 @@
-﻿function validatemobile(mobile)
+﻿/*
+现在的手机号码段有联通、移动和电信。
+
+中国电信手机号码开头数字
+2G/3G号段（CDMA2000网络）133、153、180、181、189
+4G号段 177
+
+
+中国联通手机号码开头数字
+2G号段（GSM网络）130、131、132、155、156
+3G上网卡145
+3G号段（WCDMA网络）185、186
+4G号段 176、185[1]
+
+中国移动手机号码开头数字
+2G号段（GSM网络）有134x（0-8）、135、136、137、138、139、150、151、152、158、159、182、183、184。
+3G号段（TD-SCDMA网络）有157、187、188
+3G上网卡 147
+4G号段 178
+
+从以上我们可以看到第一位是【1】开头，第二位则则有【3,4,5,7,8】，第三位则是【0-9】，第三位之后则是数字【0-9】。从而我们可以得出
+一个符合当前的手机号码验证正则表达式。
+*/
+function validatemobile(m)
     {
-        /*if(mobile.length==0)
-        {
-           alert('请输入手机号码！');
-           document.form1.mobile.focus();
-           return false;
-        } */
-        if(mobile.length!=11)
-        {
-            alert('请输入有效的手机号码！');
-            document.form1.mobile.focus();
-            return false;
-        }
-        
-        /*var myreg = /^(((13[0-9]{1})|159|153)+\d{8})$/;
+	var mobile=m.value;
+		
+        var myreg = /^1[3|4|5|7|8][0-9]{9}$/;
         if(!myreg.test(mobile))
         {
             alert('请输入有效的手机号码！');
-            document.form1.mobile.focus();
+            m.focus();
             return false;
-        }*/
+        }
     }

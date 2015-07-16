@@ -61,7 +61,7 @@ body{background:#7E7C57;}
 #wrap .menu{float:left;}
 #wrap .menu li {float:left;width:20px;cursor:pointer;color:#FDC000;font-size:25px;font-weight:bold;list-style:none;margin-right:5px;}
 #wrap .page div{float:left;}
-#wrap .main {position:absolute;top:0px;width:190px;}
+#wrap .main {position:absolute;top:0px;}
 #wrap .main .mbox {float:left;width:800px;height:700px;text-align:center;color:#fff;}
 #wrap .main .mbox  p{font-size:20px; line-height:200%;text-align:left;margin-top:20px;}
 h1{	
