@@ -1,5 +1,5 @@
-<?php
-      error_reporting(0);
+﻿<?php
+     error_reporting(0);
       session_start();
       require_once 'db.php';
 if(isset($_REQUEST['submitform']))
@@ -13,14 +13,14 @@ if(isset($_REQUEST['submitform']))
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't access database1.".' Because '. mysql_error();
+		$_GLOBALS['message']= mysql_error();
 		goto end;
 		}
 		$query="CREATE TABLE ".$_SESSION['studentname']."(like test);";
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't create table1.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}		
 		}
@@ -29,28 +29,14 @@ if(isset($_REQUEST['submitform']))
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't drop table.".' Because '. mysql_error();
-		goto end;
-		}
-		$query="delete from users1 where name = '".$_SESSION['studentname']."';";
-		if(!executeQuery($query))
-		{
-		$error=true;
-		$_GLOBALS['message']="Can't delete record.".' Because '. mysql_error();
-		goto end;
-		}
-		$query="insert users1 (name) value('".$_SESSION['studentname']."');";
-		if(!executeQuery($query))
-		{
-		$error=true;
-		$_GLOBALS['message']="Can't access database2.".' Because '. mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		goto end;
 		}
 		$query="CREATE TABLE ".$_SESSION['studentname']."(like test);";
 		if(!executeQuery($query))
 		{
 		$error=true;
-		$_GLOBALS['message']="Can't create table2.".' Because '. mysql_error();
+		$_GLOBALS['message']= mysql_error();
 		goto end;
 		}
 	}
@@ -63,7 +49,7 @@ if(isset($_REQUEST['submitform']))
 		if(!executeQuery($query))
 		{	
 		$error=true;
-		$_GLOBALS['message']="Your previous answer is not updated.Please answer once again.".' Because '.mysql_error();
+		$_GLOBALS['message']=mysql_error();
 		break;
 		}
 	}
@@ -73,7 +59,7 @@ if(isset($_REQUEST['submitform']))
 	}
 	end:
 			unset($_REQUEST['submitform']);		
-			echo '<font style="color:white;">'.$_GLOBALS['message'].'</font>';			
+			echo '<font style="color:white;">'.$_GLOBALS['message'].'</font>';
 }
  ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -85,7 +71,6 @@ if(isset($_REQUEST['submitform']))
 <link href="style.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="http://www.w3cschool.cn/jquery.js"></script>
 <script src="scripts/jquery.js" type="text/javascript"></script>
-<!--script src="scripts/validateForm.js" type="text/javascript"></script-->
 <script src="scripts/setTable.js" type="text/javascript"></script>
 <script src="scripts/validateID.js" type="text/javascript"></script>
 <script src="scripts/validatemobile.js" type="text/javascript"></script>
@@ -171,7 +156,7 @@ if(isset($_REQUEST['submitform']))
 						<td>宿舍号</td>
 						<td><input type="text" name="one7" class="textNormal"></td>
 						<td>电话</td>
-						<td><input type="text" name="one8" class="textNormal" onchange="validatemobile(this.value)" maxlength="11"></td>
+						<td><input type="text" name="one8" class="textNormal" onchange="validatemobile(this)" maxlength="11"></td>
 						</tr>
 						<tr>
 						<td>身高</td>
